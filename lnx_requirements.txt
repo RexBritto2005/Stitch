@@ -1,0 +1,9 @@
+colorama==0.4.6
+pexpect==4.9.0
+pycryptodome==3.21.0
+PyInstaller==6.11.1
+python-dateutil==2.9.0.post0
+python-xlib==0.33
+pyudev==0.24.3
+Pillow==11.0.0
+requests==2.32.3

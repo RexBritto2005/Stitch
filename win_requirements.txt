@@ -1,0 +1,13 @@
+colorama==0.4.6
+Pillow==11.0.0
+py2exe==0.14.0.0
+pycryptodome==3.21.0
+pyreadline3==3.5.4
+pywin32==308
+requests==2.32.3
+python-dateutil==2.9.0.post0
+
+# Optional: pyWinhook (requires SWIG to build)
+# If you need keyboard/mouse hook functionality, install separately:
+# pip install pyWinhook
+# Or use the pre-built wheel from: https://www.lfd.uci.edu/~gohlke/pythonlibs/
