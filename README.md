@@ -243,12 +243,3 @@ Stitch_Python313/
 help                 # Show all available commands
 help <command>       # Get help for specific command
 ```
-
-### Logs
-Check `Logs/stitch.log` for detailed application logs and error information.
-
-## License
-MIT License - See LICENSE file for details.
-
-## Legal Notice
-This software is for educational and authorized testing purposes only. Users must comply with all applicable laws and regulations. Unauthorized access to computer systems is illegal.
