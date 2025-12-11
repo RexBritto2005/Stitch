@@ -171,6 +171,7 @@ Payloads/
 Application/Stitch_Vars/history.ini
 Application/Stitch_Vars/st_aes_lib.ini
 Application/Stitch_Vars/stitch_config.ini
+Application/Stitch_Vars/st_aes.py
 
 # Generated payload files
 *.exe

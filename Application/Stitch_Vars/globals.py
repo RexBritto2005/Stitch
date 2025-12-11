@@ -116,30 +116,34 @@ st_paths: Final[list[Path]] = [
 for path in st_paths:
     path.mkdir(parents=True, exist_ok=True)
 
-# Generate AES key if not exists
+# Generate unique AES key file for this installation if it doesn't exist
 if not st_aes.exists():
     # Use secrets module for cryptographically strong random generation
     key_bytes = secrets.token_bytes(32)
     key = base64.b64encode(key_bytes).decode('ascii')
     
+    # Create abbreviation from key
+    aes_abbrev = ''.join([
+        key[21], key[0], key[1], key[43], key[5],
+        key[13], key[7], key[24], key[31],
+        key[35], key[16], key[39], key[28]
+    ])
+    
     code = f'''# Copyright (c) 2017, Nathan Lopez
 # Stitch is under the MIT license. See the LICENSE file at the root of the project for the detailed license terms.
-# Modernized for Python 3.13
+# Modernized for Python 3.13 - Auto-generated unique key
 
 from __future__ import annotations
 import base64
 from typing import Final
 
 aes_encoded: Final[str] = '{key}'
-aes_abbrev: Final[str] = ''.join([
-    aes_encoded[21], aes_encoded[0], aes_encoded[1], aes_encoded[43], aes_encoded[5],
-    aes_encoded[13], aes_encoded[7], aes_encoded[24], aes_encoded[31],
-    aes_encoded[35], aes_encoded[16], aes_encoded[39], aes_encoded[28]
-])
+aes_abbrev: Final[str] = '{aes_abbrev}'
 secret: Final[bytes] = base64.b64decode(aes_encoded)
 '''
     
     st_aes.write_text(code, encoding='utf-8')
+    print(f"{ST_TAG} Generated unique AES key for this installation")
 
 # Initialize logging
 stitch_log.touch(exist_ok=True)
