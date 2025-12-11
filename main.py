@@ -99,12 +99,7 @@ def main():
     except ImportError as e:
         print(f"\n[!] Import Error: {e}")
         print("[*] Please ensure all dependencies are installed:")
-        if sys.platform.startswith('win'):
-            print("    pip install -r win_requirements.txt")
-        elif sys.platform.startswith('darwin'):
-            print("    pip install -r osx_requirements.txt")
-        else:
-            print("    pip install -r lnx_requirements.txt")
+        print("    pip install -r win_requirements.txt")
         sys.exit(1)
     except Exception as e:
         print(f"\n[!] Unexpected error: {e}")

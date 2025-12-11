@@ -4,10 +4,10 @@
 **Stitch is for education/research purposes only. The author takes NO responsibility for how you choose to use this tool. Use only on systems you own or have explicit permission to test.**
 
 ## About
-Stitch is a cross-platform Python remote administration tool that allows you to build custom payloads for Windows, macOS, and Linux. All communications are AES encrypted for security.
+Stitch is a Python remote administration tool optimized for Windows systems. While the core functionality supports cross-platform operations, this version is primarily configured for Windows environments. All communications are AES encrypted for security.
 
 ## Features
-- **Cross-platform support** (Windows, macOS, Linux)
+- **Windows-optimized** with cross-platform core support
 - **AES encrypted communication**
 - **Remote shell access**
 - **File upload/download**
@@ -25,14 +25,7 @@ Stitch is a cross-platform Python remote administration tool that allows you to 
 
 ### Install Dependencies
 ```bash
-# Windows
 pip install -r win_requirements.txt
-
-# macOS
-pip install -r osx_requirements.txt
-
-# Linux
-pip install -r lnx_requirements.txt
 ```
 
 ## Usage
